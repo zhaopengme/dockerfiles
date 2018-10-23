@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER leafney "babycoolzx@126.com"
+MAINTAINER zhaopengme "user.zhaopeng@gmail.com"
 
 RUN apk update && \
 	apk add mysql mysql-client && \
