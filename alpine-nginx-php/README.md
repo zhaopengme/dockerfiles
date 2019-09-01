@@ -1,6 +1,8 @@
-[![pipeline status](https://gitlab.com/ric_harvey/nginx-php-fpm/badges/master/pipeline.svg)](https://gitlab.com/ric_harvey/nginx-php-fpm/commits/master)
+![pipeline status](https://gitlab.com/ric_harvey/nginx-php-fpm/badges/master/pipeline.svg)
 ![docker hub](https://img.shields.io/docker/pulls/richarvey/nginx-php-fpm.svg?style=flat-square)
 ![docker hub](https://img.shields.io/docker/stars/richarvey/nginx-php-fpm.svg?style=flat-square)
+
+## Please open pull requests and issues on [https://gitlab.com/ric_harvey/nginx-php-fpm](https://gitlab.com/ric_harvey/nginx-php-fpm)
 
 ## Overview
 This is a Dockerfile/image to build a container for nginx and php-fpm, with the ability to pull website code from git when the container is created, as well as allowing the container to push and pull changes to the code to and from git. The container also has the ability to update templated files with variables passed to docker in order to update your code and settings. There is support for lets encrypt SSL configurations, custom nginx configs, core nginx/PHP variable overrides for running preferences, X-Forwarded-For headers and UID mapping for local volume support.
@@ -10,7 +12,7 @@ If you have improvements or suggestions please open an issue or pull request on 
 ### Versioning
 | Docker Tag | Git Release | Nginx Version | PHP Version | Alpine Version |
 |-----|-------|-----|--------|--------|
-| latest/1.5.7 | Master Branch |1.14.0 | 7.2.10 | 3.7 |
+| latest/1.7.4 | Master Branch |1.16.0 | 7.3.8 | 3.9 |
 
 For other tags please see: [versioning](https://gitlab.com/ric_harvey/nginx-php-fpm/blob/master/docs/versioning.md)
 
@@ -64,9 +66,3 @@ For more detailed examples and explanations please refer to the documentation.
 ## Guides
 - [Running in Kubernetes](https://gitlab.com/ric_harvey/nginx-php-fpm/blob/master/docs/guides/kubernetes.md)
 - [Using Docker Compose](https://gitlab.com/ric_harvey/nginx-php-fpm/blob/master/docs/guides/docker_compose.md)
-
-# build image
-```
-docker build -t zhaopengme/alpine-nginx-php .
-docker run -it --rm -v $(pwd)/data:/var/www/html -p 80:80 zhaopengme/alpine-nginx-php
-```
